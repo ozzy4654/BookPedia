@@ -29,7 +29,6 @@ import cmp_bookpedia.composeapp.generated.resources.search_hint
 import com.plcoding.bookpedia.core.presentation.DarkBlue
 import com.plcoding.bookpedia.core.presentation.DesertWhite
 import com.plcoding.bookpedia.core.presentation.SandYellow
-import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -92,7 +91,7 @@ fun BookSearchBar(
                     }
                 }
             },
-            modifier = Modifier
+            modifier = modifier
                 .background(
                     shape = RoundedCornerShape(100.dp),
                     color = DesertWhite
