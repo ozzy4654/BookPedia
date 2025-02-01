@@ -53,7 +53,7 @@ fun App() {
                             selectedBookViewModel.onSelectBook(book)
 
                             navController.navigate(
-                                Route.BookDetail
+                                Route.BookDetail(bookId = book.id)
                             )
                         },
                     )
