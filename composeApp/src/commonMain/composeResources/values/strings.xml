@@ -17,6 +17,8 @@
     <string name= "book_cover">Book cover image</string>
     <string name= "pages">Pages</string>
     <string name= "rating">Rating</string>
+    <string name= "synopsis">Synopsis</string>
+    <string name= "description_unavailable">Description Unavailable</string>
     <string name= "languages">Languages</string>
 
 
