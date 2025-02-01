@@ -112,20 +112,15 @@ private fun BookDetailScreen(
                             title = stringResource(Res.string.rating)
                         ) {
                             BookChip {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(5.dp)
-                                ) {
-                                    Text(
-                                        text = "${round(rating * 10 / 10.0)}"
-                                    )
+                                Text(
+                                    text = "${round(rating * 10 / 10.0)}"
+                                )
 
-                                    Icon(
-                                        imageVector = Icons.Default.Star,
-                                        contentDescription = null,
-                                        tint = SandYellow
-                                    )
-                                }
+                                Icon(
+                                    imageVector = Icons.Default.Star,
+                                    contentDescription = null,
+                                    tint = SandYellow
+                                )
                             }
                         }
                     }
@@ -178,13 +173,7 @@ private fun BookDetailScreen(
                 )
 
                 if (state.isLoading) {
-                    Box(
-                        modifier = Modifier.fillMaxWidth()
-                            .weight(1f),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        CircularProgressIndicator()
-                    }
+                    CircularProgressIndicator()
                 } else {
                     Text(
                         text =
