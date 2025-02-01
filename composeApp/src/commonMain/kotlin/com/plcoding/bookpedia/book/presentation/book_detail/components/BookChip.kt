@@ -20,16 +20,16 @@ enum class ChipSize {
 
 @Composable
 fun BookChip(
-    modifier: Modifier,
-    size: ChipSize,
+    modifier: Modifier = Modifier,
+    size: ChipSize = ChipSize.REGULAR,
     chipContent: @Composable () -> Unit
 ) {
     Box(
         modifier = modifier
             .widthIn(
                 min = when (size) {
-                    ChipSize.SMALL -> TODO()
-                    ChipSize.REGULAR -> TODO()
+                    ChipSize.SMALL -> 50.dp
+                    ChipSize.REGULAR -> 80.dp
                 }
             )
             .clip(RoundedCornerShape(16.dp))

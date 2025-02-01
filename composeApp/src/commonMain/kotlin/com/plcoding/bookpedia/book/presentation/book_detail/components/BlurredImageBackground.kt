@@ -108,6 +108,12 @@ fun BlurredImageBackground(
                     .fillMaxWidth()
                     .background(DesertWhite),
             ) {
+                Column() {
+                    Spacer(
+                        modifier = Modifier.fillMaxHeight(fraction = 0.15f)
+                    )
+                    content()
+                }
 
             }
         }
@@ -209,7 +215,5 @@ fun BlurredImageBackground(
             }
 
         }
-
-        content()
     }
 }

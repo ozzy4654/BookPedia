@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun TitledContent(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     title: String,
     content: @Composable () -> Unit
 ) {
