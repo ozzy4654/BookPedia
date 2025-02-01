@@ -14,6 +14,10 @@
     <string name= "error_no_internet">Couldn't, reach server please check internet connection</string>
     <string name= "error_serialization">Couldn't parse data</string>
 
+    <string name= "book_cover">Book cover image</string>
+    <string name= "pages">Pages</string>
+    <string name= "rating">Rating</string>
+    <string name= "languages">Languages</string>
 
 
 </resources>
