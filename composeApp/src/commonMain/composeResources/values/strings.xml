@@ -20,6 +20,9 @@
     <string name= "synopsis">Synopsis</string>
     <string name= "description_unavailable">Description Unavailable</string>
     <string name= "languages">Languages</string>
+    <string name= "go_back">Go back</string>
+    <string name= "mark_as_fav">Mark as favorite</string>
+    <string name= "remove_from_fav">Remove from favorites</string>
 
 
 </resources>
