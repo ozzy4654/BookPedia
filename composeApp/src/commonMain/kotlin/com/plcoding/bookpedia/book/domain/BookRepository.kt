@@ -1,7 +1,9 @@
 package com.plcoding.bookpedia.book.domain
 
 import com.plcoding.bookpedia.core.domain.DataError
+import com.plcoding.bookpedia.core.domain.EmptyResult
 import com.plcoding.bookpedia.core.domain.Result
+import kotlinx.coroutines.flow.Flow
 
 interface BookRepository {
 
@@ -9,5 +11,12 @@ interface BookRepository {
 
     //not using dataerror.remote as we might fetch this from our local database later etc...
     suspend fun getBookDescription(bookId: String): Result<String?, DataError>
+
+    fun getFavoriteBooks(): Flow<List<Book>>
+
+    fun isBookFavorite(id:String): Flow<Boolean>
+
+    suspend fun markAsFavorite(book:Book): EmptyResult<DataError.Local>
+    suspend fun deleteFromFavorites(id: String)
 
 }
