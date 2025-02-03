@@ -7,6 +7,7 @@ import com.plcoding.bookpedia.book.domain.BookRepository
 import com.plcoding.bookpedia.core.domain.onError
 import com.plcoding.bookpedia.core.domain.onSuccess
 import com.plcoding.bookpedia.core.presentation.toUiText
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -20,6 +21,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
+@OptIn(FlowPreview::class)
 class BookListViewModel(
     private val bookRepository: BookRepository
 ) : ViewModel() {

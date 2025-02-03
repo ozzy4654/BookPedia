@@ -7,6 +7,7 @@ import com.plcoding.bookpedia.di.initKoin
 
 fun main() {
     initKoin()
+    
     application {
         Window(
             onCloseRequest = ::exitApplication,
