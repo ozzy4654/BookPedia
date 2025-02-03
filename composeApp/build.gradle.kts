@@ -1,5 +1,4 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -14,7 +13,6 @@ plugins {
 
 kotlin {
     androidTarget {
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
@@ -27,6 +25,7 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
+            linkerOpts("-Xbinary=bundleId=com.plcoding.bookpedia")
             isStatic = true
         }
     }
@@ -48,6 +47,7 @@ kotlin {
             implementation(libs.koin.androidx.compose)
             implementation(libs.ktor.client.okhttp)
         }
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -84,6 +84,10 @@ kotlin {
 
         dependencies {
             add("kspAndroid", libs.androidx.room.compiler) // KSP for Android (Room Compiler)
+            add("kspIosSimulatorArm64",  libs.androidx.room.compiler)
+            add("kspIosX64",  libs.androidx.room.compiler)
+            add("kspIosArm64",  libs.androidx.room.compiler)
+            add("kspDesktop",  libs.androidx.room.compiler)
         }
     }
 }
